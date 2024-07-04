@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2? font-family=Poppins:wght@300;400;500;600;700;800;900& display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Poppins' sans-serif;
+}
+
+:root{
+    --bg-color:skyblue;
+    --second-bg-color:#3b2d2d;
+    --text-color:white;
+    --main-color:lightpink;
+}
+html{
+    overflow:hidden;
+    margin: auto;
+    font-size: 70%;
+}
+
+
+
+.image-container{
+    display:flex;
+    float:right;
+    margin-left: auto;
+    position: relative;
+    background: transparent;
+    border-radius: 50%;
+    border: 15px solid #fda5a5;
+    outline: 15px solid #036b6b; 
+    width: 350px; /* Set the desired width of the circle */
+    height: 350px; /* Set the desired height of the circle */
+    overflow: hidden;
+    justify-content:center;
+    align-items:center;
+    border: 5px solid #690505; /* Optional: border around the circle */
+
+}
+.image-container:hover {
+        transform: scale(1.2); /* Scale image to 120% on hover */
+        opacity: 0.8; /* Change opacity to 80% on hover */
+    }
+@keyframes example-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.image-container::before{
+    content:'';
+    position: absolute;
+    top:0;
+    right:0;
+    border:#036b6b;
+    outline:#fda5a5;
+    width:300%;
+    height:300%;
+    background:brown ;
+    animation:showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.image-container:hover::before{
+    width: 100px;
+}
+
+.header{
+    background: rgb(245, 215, 215);
+    position:fixed;
+    padding:20px 10%;
+    z-index:100;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:100;  
+}
+
+.logo{
+    position:relative;
+    font-size:25px;
+    color:rgb(114, 66, 66);
+    text-decoration:none;
+    font-weight:600;
+}
+
+
+.logo::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: rgb(245, 215, 215);
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+}
+
+.navbar a{
+    position:relative;
+    font-size:18px;
+    color:brown;
+    text-decoration:none;
+    font-weight:500;
+    margin-left: 35px;
+    transition:3s;
+    font-family: Arial, sans-serif;
+}
+.navbar a:hover,
+.navbar a active {
+    color:rgb(9, 207, 207);
+}
+
+.navbar a::before{
+    content:'';
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:rgb(245, 215, 215) ;
+    animation:showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+
+.home{
+    height:100vh;
+    align-items:center;
+    padding:10%;
+    display: flex;
+    margin: 10;
+    font-family: Arial, sans-serif;
+    background-color: brown;
+    position: relative;
+}
+
+.home-content{
+    max-width: 600px;    
+}
+
+.home-content h1{
+    position:relative;
+    font-size:40px;
+    font-weight:700;  
+    line-height: 1.2;
+    margin-bottom: 20px;
+    
+}
+
+.home-content h1 ::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:300%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h1 span{
+    color:rgb(245, 215, 215);
+}
+
+.home-content h3{
+    position:relative;
+    font-size:32px;
+    font-weight: 700;
+    color: black;
+}
+.home-content h3::before{
+    content:'';
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: brown;;
+    animation:showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p{
+    position:relative;
+    font-size:30px;  
+    margin:20px 0 30px;
+    color:rgb(252, 252, 252);
+    font-style: oblique;
+    font-display:unset;
+    font-weight: 500;
+}
+
+.home-content p::before{
+    content:'';
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    height: 30px;
+}
+
+.home-content .btn-box::before{
+    content:'';
+    position: absolute;
+    top:0;
+    right:0;
+    width:125%;
+    height:150%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index:2;
+}
+.home-sci{
+    margin: 25px 0 40 px;
+}
+
+
+
+.btn-box a{
+    position:relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height:120%;
+    background:transparent;
+    border:2px solid palevioletred;
+    border-radius: 10px;
+    font-size:18px;
+    color:whitesmoke;
+    text-decoration: none;
+    font-weight:400;
+    letter-spacing: .5px;
+    z-index: 1;
+
+}
+
+.btn-box a:nth-child(2){
+    background:transparent;
+    color:lightgoldenrodyellow;
+}
+
+.btn-box a::before {
+    content:'';
+    position:absolute;
+    top:0;
+    background: grey;
+    left:0;
+    width:0;
+    height:100%;
+    transition:0.5s;
+    z-index: -1;
+}
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+/*KEYFRAMES ANIMATION */
+@keyframes showRight {
+    100% {
+        width:0;
+    }
+}
+
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+}
+
+
+#about{
+    padding: 80px 0;
+    color:#7c1103; 
+
+}
+.body{
+    background-color: #2F4F4F;
+}
+
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+    position:relative;
+}
+
+.about-col-1 img{
+    margin-top: 100px;
+    margin-left: 40px;
+    display:flex;
+    float:right;
+    margin-left: auto;
+    position: relative;
+    background: #048ab3;
+    border-radius: 50%;
+    border: 15px solid #fda5a5;
+    outline: 15px solid #036b6b; 
+    width: 300px; /* Set the desired width of the circle */
+    height: 300px; /* Set the desired height of the circle */
+    overflow: hidden;
+    justify-content:center;
+    align-items:center;
+    border: 5px solid #a13d3d; /* Optional: border around the circle */
+}
+
+.animated-img {
+    justify-content: center;
+    width: 40%;
+    height: 70px; /* Maintain aspect ratio */
+    transition: width 0.5s ease, transform 0.5s ease;
+    animation: example-animation 5s infinite alternate;
+}
+
+.animated-img:hover {
+    width: 50%;
+    transform: rotate(10deg);
+}
+
+@keyframes example-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about-col-2{
+    flex-basis: 60%;
+
+}
+
+.sub-title{
+    position: relative;
+    font-size:40px;
+    font-weight:500;
+    color:rgb(245, 215, 215);
+    line-height: 2.5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
+
+}
+.sub-title:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+.sub-title::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+}
+
+.about-col-2 p{
+    font-family: Poppins;
+    position: relative;
+    font-size:16px;
+    font-weight: 100;
+    margin-right: 100px;
+    line-height: 1.5;
+    margin-top:0.5em;
+}
+
+.transition-paragraph {
+    font-family: Poppins;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    color:#f7ffff;
+    opacity: 1;
+    transform: translateX(0);
+    margin-bottom: 15px;
+}
+
+.transition-paragraph:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+.transition-paragraph::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+}
+
+.about-col-3 {
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background:transparent;
+    border:2px solid palevioletred;
+    border-radius: 10px;
+    font-size:14px;
+    color:white;
+    text-decoration: none;
+    font-weight:400;
+    letter-spacing: .5px;
+    z-index: 1;
+    width: 80px;
+    height: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+.btn::before{
+    content:'';
+    position:absolute;
+    top:-15px;
+    right:-11px;
+    width:300%;
+    height:300%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+}
+
+.btn:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+#academic{
+    color:skyblue
+}
+
+.academic {
+    margin-top: 130px;
+    word-spacing: 10px;
+    margin-bottom: 10px;
+    padding: 200px;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f7ffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.academic h1 {
+    font-size: 36px;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -3px;
+}
+
+.timeline-item .timeline-content {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    padding: 20px;
+    background: transparent;
+    animation: infinite 0.5s linear;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    animation:infinite 0.5s linear;
+}
+
+.timeline-item .timeline-content img.education-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 15px solid #fda5a5;
+    outline: 15x solid #f7f308; 
+    width: 100px; /* Set the desired width of the circle */
+    height: 100px; /* Set the desired height of the circle */
+    overflow: hidden;
+    justify-content:center;
+    align-items:center;
+    border: 5px solid #8fa13d; /* Optional: border around the circle */
+}
+
+.timeline-item .timeline-content .education-text {
+    max-width: 500px;
+}
+
+.timeline-item .timeline-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.timeline-item .timeline-content p {
+    font-size: 18px;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#skills{
+    color:red;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: brown;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.skills{
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    flex-basis: 60%;
+    margin-top:  80px;
+
+}
+
+.skills h1{
+    position: relative;
+    font-size:40px;
+    font-weight:500;
+    color:white;
+    line-height: 2.5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
+
+}
+.skills h1:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+.skills h1::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+
+}
+
+.me{
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    flex-basis: 60%;
+    margin-top:  80px;
+
+}
+
+.me h1{
+    position: relative;
+    font-size:40px;
+    font-weight:500;
+    color:white;
+    line-height: 2.5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
+
+}
+.me h1:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+.me h1::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+
+}
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    margin: 0 0 10px 0;
+}
+
+.skill h3:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+.skill h3::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+
+}
+
+.progress {
+    background-color: lightgrey;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+}
+
+.progress-bar {
+    background-color: rgb(211, 168, 155);
+    height: 100%;
+    line-height: 30px;
+    color: black;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+    border-radius: 20px 0 0 20px;
+    transition: width 0.4s ease;
+}
+
+.progress-bar:hover {
+    transform: translateX(10px);
+    opacity: 0.8;
+}
+
+.progress-bar::before{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:100%;
+    background:brown;
+    animation:showRight 1s ease forwards;
+    animation-delay:.4s;
+
+}
+
+
+.heading{
+    position: relative;
+    font-size:40px;
+    margin-top: 100px;
+    font-weight:500;
+    color:yellow;
+    line-height: 2.5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
+
+}
+
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.contact form .input-box{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.contact form .input-field{
+    position:relative;
+    width:49%;
+    margin:.8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea{
+    width:100%;
+    height:100%;
+    padding:1.5rem;
+    font-size:1.6rem;
+    color:white;
+    border-radius:.6rem ;
+    border:.2 rem solid yellow;
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder{
+    color:black;
+
+}
+
+.contact form .textarea-field {
+    position:relative;
+    margin:.8rem 0 2.7rem;
+    display:flex;
+
+}
+
+.contact form .textarea-field textarea {
+    resize:none;
+
+}
+
+.contact form .btn-box.btns .btn {
+    cursor:pointer;
+    width: 70px;
+    height: 40px;
+    color: yellow;
+    font-size: medium;
+}
